@@ -1,0 +1,34 @@
+@startuml
+title 汎用ユースケース図（A/B/C/D題材選択）
+
+actor User as "ユーザー"
+
+rectangle "システム" {
+  
+  usecase UC_TOP as "トップページを表示"
+  usecase UC_SELECT as "題材選択機能を利用"
+  usecase UC_A as "題材Aを選択"
+  usecase UC_B as "題材Bを選択"
+  usecase UC_C as "題材Cを選択"
+  usecase UC_D as "題材Dを選択"
+  usecase UC_OTHER as "他機能へ遷移"
+  usecase UC_DISPLAY as "画面を表示"
+
+}
+
+User --> UC_TOP
+UC_TOP ..> UC_SELECT : <<extend>>
+UC_TOP ..> UC_OTHER : <<extend>>
+
+UC_SELECT ..> UC_A : <<extend>>
+UC_SELECT ..> UC_B : <<extend>>
+UC_SELECT ..> UC_C : <<extend>>
+UC_SELECT ..> UC_D : <<extend>>
+
+UC_A --> UC_DISPLAY
+UC_B --> UC_DISPLAY
+UC_C --> UC_DISPLAY
+UC_D --> UC_DISPLAY
+UC_OTHER --> UC_DISPLAY
+
+@enduml
