@@ -39,3 +39,16 @@ kohaku-yuki
 - 例：ユーザーは◯◯ボタンを押して◯◯を確認・編集できる。
 
 ---
+## 3. 画面レイアウト（ワイヤーフレーム）
+
+※ Figma などのリンクを貼るか、テキストで構成を書く。
+
+- Figmaリンク：https://www.figma.com/design/6XR9rnolNSTWpsqP3X9nKJ/%E7%84%A1%E9%A1%8C?node-id=0-1&p=f&t=A9wdJAOUcIsw0dfr-0
+
+- 基本構成：
+
+  - Header：
+
+  - Body：達成ボタン
+
+※ 必要だと思うと判断した場合は、セクションや構成も記述してください。
