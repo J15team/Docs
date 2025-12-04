@@ -1,0 +1,38 @@
+@startuml
+
+skinparam conditionStyle inside
+skinparam defaultTextAlignment center
+
+title 汎用アクティビティ図（抽象フロー：A/B/C/D分岐）
+
+start
+
+:ユーザーがアクセス;
+
+:サーバーからトップページを取得;
+
+if (題材選択機能を選ぶか？) then (YES)
+    
+    :題材を選択;
+
+    split
+        :題材A\n処理Aを実行;
+    split again
+        :題材B\n処理Bを実行;
+    split again
+        :題材C\n処理Cを実行;
+    split again
+        :題材D\n処理Dを実行;
+    end split
+
+    :各選択枠の適当な画面を作成;
+
+else (NO)
+    :トップページの他機能へ遷移;
+endif
+
+:出力生成;
+
+stop
+
+@enduml
